@@ -61,20 +61,3 @@
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
-// import 'core-js';
-// import 'zone.js';
-
-if (!Element.prototype.matches) {
-    Element.prototype.matches =
-    (Element.prototype as any).matchesSelector ||
-    (Element.prototype as any).mozMatchesSelector ||
-    (Element.prototype as any).msMatchesSelector ||
-    (Element.prototype as any).oMatchesSelector ||
-    (Element.prototype as any).webkitMatchesSelector ||
-        function(s) {
-          var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-              i = matches.length;
-          while (--i >= 0 && matches.item(i) !== this) {}
-          return i > -1;
-        };
-  }
